@@ -9,7 +9,7 @@ If your HTCondor resides on the host machine, you need to modify [condor_textfil
 
 *Run installation script*
 ```
-https://raw.githubusercontent.com/ejr004/condor_textfile_collector/master/node_exporter_install.sh | bash
+wget -O - https://raw.githubusercontent.com/ejr004/condor_textfile_collector/master/node_exporter_install.sh | bash
 ```
 
 
