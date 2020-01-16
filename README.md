@@ -17,7 +17,7 @@ https://raw.githubusercontent.com/ejr004/condor_textfile_collector/master/node_e
 ```
 crontab -e
 
-*/5 * * * * /scripts/condor_node_exporter.sh ce01
+*/5 * * * * /scripts/condor_node_exporter.sh <your-container-ce>
 ```
 
 
