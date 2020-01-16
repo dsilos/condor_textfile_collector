@@ -1,4 +1,4 @@
-Solution to expose HTCondor metrics througt node_exporter
+Solution to expose HTCondor metrics through node_exporter
 
 **ATENTION !!!**
 In this case specific case, HTCondor-ce runs inside of [HTCondor-CE Container](https://github.com/simple-framework/simple_htcondor_ce).
