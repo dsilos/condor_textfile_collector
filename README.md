@@ -1,9 +1,9 @@
 Solution to expose HTCondor metrics througt node_exporter
 
 **ATENTION !!!**
-In this case specific case, condor-ce runs inside of [HTcondor-ce SIMPLE GRID container] (https://github.com/simple-framework/simple_htcondor_ce).
+In this case specific case, HTCondor-ce runs inside of [HTCondor-CE Container](https://github.com/simple-framework/simple_htcondor_ce).
 
-If your HTcondor resides on the host machine, you need to modify [condor_textfile_collector.sh] (./condor_textfile_collector.sh) and remove "docker exec".
+If your HTCondor resides on the host machine, you need to modify [condor_textfile_collector.sh](./condor_node_exporter.sh) and remove "docker exec".
 
 ## Installation instructions
 
@@ -25,16 +25,16 @@ crontab -e
 ```
 firewall-cmd --zone=public --add-port=9090/tcp --permanent
 ```
-And it's done !
+And you are ready to go !
 
 
-# Scripts
+# Files
 
 ### node_exporter_install.sh
 Installs node exporter v0.18.1 and setup textfile collector directory on host machine.
 
 ### condor_textfile_collector.sh
-Generate condor-ce metrics for node exporter file collector to consume
+Generate condor-ce metrics for node exporter file collector
 
 
 
