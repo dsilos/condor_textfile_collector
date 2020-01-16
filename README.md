@@ -3,7 +3,7 @@ Solution to expose HTCondor metrics through node_exporter
 **ATENTION !!!**
 In this case specific case, HTCondor-ce runs inside of [HTCondor-CE Container](https://github.com/simple-framework/simple_htcondor_ce).
 
-If your HTCondor resides on the host machine, you need to modify [condor_textfile_collector.sh](./condor_node_exporter.sh) and remove "docker exec".
+*If your HTCondor resides on the host machine, you need to modify [condor_textfile_collector.sh](./condor_node_exporter.sh) and remove "docker exec".*
 
 ## Installation instructions
 
