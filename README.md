@@ -1,9 +1,9 @@
 Solution to expose HTCondor metrics througt node_exporter
 
 **ATENTION !!!**
-In this case specific case, condor-ce runs inside of SIMPLE GRID container.
+In this case specific case, condor-ce runs inside of [HTcondor-ce SIMPLE GRID container] (https://github.com/simple-framework/simple_htcondor_ce).
 
-**If your HTcondor resides on the host machine, you need to modify [condor_textfile_collector.sh] (condor_textfile_collector.sh) (remove "docker exec").**
+If your HTcondor resides on the host machine, you need to modify [condor_textfile_collector.sh] (./condor_textfile_collector.sh) and remove "docker exec".
 
 ## Installation instructions
 
