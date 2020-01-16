@@ -1,11 +1,12 @@
 #!bin/sh
 echo "Installing node exporter"
-REPO_URL=https://github.com/ejr004/condor_textfile_collector/raw
+REPO_URL="https://raw.githubusercontent.com/ejr004/"
+NODE_EXPORTER_VERSION="0.18.1"
 
 # Installing node exporter
-wget -qO- https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-amd64.tar.gz | tar xvz -C /tmp/
+wget -qO- https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-$NODE_EXPORTER_VERSION.linux-amd64.tar.gz | tar xvz -C /tmp/
 
-mv /tmp/node_exporter-0.18.1.linux-amd64/node_exporter /usr/local/bin/
+mv /tmp/node_exporter-$NODE_EXPORTER_VERSION.linux-amd64/node_exporter /usr/local/bin/
 
 useradd -M -r -s /bin/false node_exporter
 
