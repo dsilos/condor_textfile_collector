@@ -25,8 +25,40 @@ crontab -e
 ```
 firewall-cmd --zone=public --add-port=9090/tcp --permanent
 ```
-And you are ready to go !
+Now you are good to go !
 
+Metrics:
+```
+# HELP condor_queue_held Metric read from /var/lib/node_exporter/textfile_collector/condor.queue.prom
+# TYPE condor_queue_held counter
+condor_queue_held{ce="ce01"} 4
+# HELP condor_queue_idle Metric read from /var/lib/node_exporter/textfile_collector/condor.queue.prom
+# TYPE condor_queue_idle counter
+condor_queue_idle{ce="ce01"} 30
+# HELP condor_queue_removed Metric read from /var/lib/node_exporter/textfile_collector/condor.queue.prom
+# TYPE condor_queue_removed counter
+condor_queue_removed{ce="ce01"} 0
+# HELP condor_queue_running Metric read from /var/lib/node_exporter/textfile_collector/condor.queue.prom
+# TYPE condor_queue_running counter
+condor_queue_running{ce="ce01"} 328
+# HELP condor_queue_suspended Metric read from /var/lib/node_exporter/textfile_collector/condor.queue.prom
+# TYPE condor_queue_suspended counter
+condor_queue_suspended{ce="ce01"} 0
+# HELP condor_status_claimed Metric read from /var/lib/node_exporter/textfile_collector/condor.status.prom
+# TYPE condor_status_claimed counter
+condor_status_claimed{ce="ce01"} 264
+# HELP condor_status_machines Metric read from /var/lib/node_exporter/textfile_collector/condor.status.prom
+# TYPE condor_status_machines counter
+condor_status_machines{ce="ce01"} 1000
+# HELP condor_status_unclaimed Metric read from /var/lib/node_exporter/textfile_collector/condor.status.prom
+# TYPE condor_status_unclaimed counter
+condor_status_unclaimed{ce="ce01"} 736
+```
+
+You can wombo combo with grafana and add [Condor general view Dashboard](./grafana-dashboards/condor_general_view.json) to your grafana dashboard.
+
+![](grafana-dashboards/dashboard.png)
+*where you are ?*
 
 # Files
 
@@ -36,8 +68,9 @@ Installs node exporter v0.18.1 and setup textfile collector directory on host ma
 ### condor_textfile_collector.sh
 Generate condor-ce metrics for node exporter file collector
 
+### condor_general_view.json
 
-
+Condor Grafana Dashboard
 
 # References:
  - https://github.com/simple-framework
