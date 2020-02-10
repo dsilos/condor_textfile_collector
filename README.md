@@ -31,28 +31,60 @@ Metrics:
 ```
 # HELP condor_queue_held Metric read from /var/lib/node_exporter/textfile_collector/condor.queue.prom
 # TYPE condor_queue_held counter
-condor_queue_held{ce="ce01"} 4
+condor_queue_held{ce="ce01"} 0
+# HELP condor_queue_held_alice Metric read from /var/lib/node_exporter/textfile_collector/condor.queue_alice.prom
+# TYPE condor_queue_held_alice untyped
+condor_queue_held_alice{ce="ce01"} 0
+# HELP condor_queue_held_lhcb Metric read from /var/lib/node_exporter/textfile_collector/condor.queue_lhcb.prom
+# TYPE condor_queue_held_lhcb untyped
+condor_queue_held_lhcb{ce="ce01"} 0
 # HELP condor_queue_idle Metric read from /var/lib/node_exporter/textfile_collector/condor.queue.prom
 # TYPE condor_queue_idle counter
-condor_queue_idle{ce="ce01"} 30
+condor_queue_idle{ce="ce01"} 1
+# HELP condor_queue_idle_alice Metric read from /var/lib/node_exporter/textfile_collector/condor.queue_alice.prom
+# TYPE condor_queue_idle_alice untyped
+condor_queue_idle_alice{ce="ce01"} 0
+# HELP condor_queue_idle_lhcb Metric read from /var/lib/node_exporter/textfile_collector/condor.queue_lhcb.prom
+# TYPE condor_queue_idle_lhcb untyped
+condor_queue_idle_lhcb{ce="ce01"} 1
 # HELP condor_queue_removed Metric read from /var/lib/node_exporter/textfile_collector/condor.queue.prom
 # TYPE condor_queue_removed counter
 condor_queue_removed{ce="ce01"} 0
+# HELP condor_queue_removed_alice Metric read from /var/lib/node_exporter/textfile_collector/condor.queue_alice.prom
+# TYPE condor_queue_removed_alice untyped
+condor_queue_removed_alice{ce="ce01"} 0
+# HELP condor_queue_removed_lhcb Metric read from /var/lib/node_exporter/textfile_collector/condor.queue_lhcb.prom
+# TYPE condor_queue_removed_lhcb untyped
+condor_queue_removed_lhcb{ce="ce01"} 0
 # HELP condor_queue_running Metric read from /var/lib/node_exporter/textfile_collector/condor.queue.prom
 # TYPE condor_queue_running counter
-condor_queue_running{ce="ce01"} 328
+condor_queue_running{ce="ce01"} 782
+# HELP condor_queue_running_alice Metric read from /var/lib/node_exporter/textfile_collector/condor.queue_alice.prom
+# TYPE condor_queue_running_alice untyped
+condor_queue_running_alice{ce="ce01"} 0
+# HELP condor_queue_running_lhcb Metric read from /var/lib/node_exporter/textfile_collector/condor.queue_lhcb.prom
+# TYPE condor_queue_running_lhcb untyped
+condor_queue_running_lhcb{ce="ce01"} 782
 # HELP condor_queue_suspended Metric read from /var/lib/node_exporter/textfile_collector/condor.queue.prom
 # TYPE condor_queue_suspended counter
 condor_queue_suspended{ce="ce01"} 0
+# HELP condor_queue_suspended_alice Metric read from /var/lib/node_exporter/textfile_collector/condor.queue_alice.prom
+# TYPE condor_queue_suspended_alice untyped
+condor_queue_suspended_alice{ce="ce01"} 0
+# HELP condor_queue_suspended_lhcb Metric read from /var/lib/node_exporter/textfile_collector/condor.queue_lhcb.prom
+# TYPE condor_queue_suspended_lhcb untyped
+condor_queue_suspended_lhcb{ce="ce01"} 0
 # HELP condor_status_claimed Metric read from /var/lib/node_exporter/textfile_collector/condor.status.prom
 # TYPE condor_status_claimed counter
-condor_status_claimed{ce="ce01"} 264
+condor_status_claimed{ce="ce01"} 778
 # HELP condor_status_machines Metric read from /var/lib/node_exporter/textfile_collector/condor.status.prom
 # TYPE condor_status_machines counter
-condor_status_machines{ce="ce01"} 1000
+condor_status_machines{ce="ce01"} 1040
 # HELP condor_status_unclaimed Metric read from /var/lib/node_exporter/textfile_collector/condor.status.prom
 # TYPE condor_status_unclaimed counter
-condor_status_unclaimed{ce="ce01"} 736
+condor_status_unclaimed{ce="ce01"} 262
+# HELP go_gc_duration_seconds A summary of the GC invocation durations.
+# TYPE go_gc_duration_seconds summary
 ```
 
 You can wombo combo with grafana and add [Condor general view Dashboard](./grafana-dashboards/condor_general_view.json) to your grafana dashboard.
