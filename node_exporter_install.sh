@@ -15,7 +15,7 @@ touch /var/lib/node_exporter/textfile_collector/condor.status
 touch /var/lib/node_exporter/textfile_collector/condor.queue
 chown -R node_exporter:node_exporter /usr/local/bin/node_exporter
 
-wget -O - $REPO_URL/master/condor_node_exporter.sh > /etc/systemd/system/node_exporter.service
+wget -O - $REPO_URL/master/node_exporter.service > /etc/systemd/system/node_exporter.service
 
 systemctl daemon-reload
 systemctl start node_exporter.service
