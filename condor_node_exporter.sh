@@ -44,3 +44,9 @@ docker exec -i $CE.cat.cbpf.br condor_ce_q -tot -constraint 'x509UserProxyVOName
 -format "# TYPE ncondor_queue_suspended_alice counter\ncondor_queue_suspended_alice{ce=\"$CE\"} %d" suspended \
  > /var/lib/node_exporter/textfile_collector/condor.queue_alice.prom.$$
 mv /var/lib/node_exporter/textfile_collector/condor.queue_alice.prom.$$ /var/lib/node_exporter/textfile_collector/condor.queue_alice.prom
+
+#Condor version value
+docker exec -i $CE.cat.cbpf.br condor_version | cut -d" " -f2 | head -1 \
+-format "# TYPE condor_version\ncondor_version{ce=\"$CE\"} %d\n" condor_version \
+> /var/lib/node_exporter/textfile_collector/condor.version.prom.$$
+mv /var/lib/node_exporter/textfile_collector/condor.version.prom.$$ /var/lib/node_exporter/textfile_collector/condor.version.prom
